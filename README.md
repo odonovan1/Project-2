@@ -4,7 +4,7 @@
 
 ### By: Owen Donovan
 
-#### [Website]() | [GitHub]() | [LinkedIn]() | [Vettery]()
+#### [ERD](https://app.diagrams.net/#G1Qt0pAaeiH8636qzaB945ax4-rQuH2kLI) | [Trello](https://trello.com/b/dR7xjyop/project-2)
 ***
 
 ### ***Description***
