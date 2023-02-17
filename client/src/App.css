@@ -58,14 +58,16 @@ nav {
   justify-content: space-around;
   align-items: center;
 
-  width: 100vw;
+  width: 30vw;
   height: 30vh;
+  border: 5px solid black;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: chocolate;
 
 }
 
-.posts {
-  display: grid;
-}
+.posts {}
 
 .main {
   display: grid;

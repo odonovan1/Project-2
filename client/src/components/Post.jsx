@@ -27,8 +27,9 @@ const Post = (props) => {
 
   return (
     <div className="postDiv">
-      <h1>Make Your own Post!</h1>
+
       <form onSubmit={handleSubmit} className="postForm">
+        <h1>Make Your own Post!</h1>
         <label htmlFor="postType">Type of Post:</label>
         <select id="postType" onChange={handleChange} value={postState.postType}>
           <option value="Hot Take">Hot Take</option>
