@@ -1,20 +1,22 @@
-# Worldwide Times
+# Sports HQ
 
 ## Date: 2/9/23
 
 ### By: Owen Donovan
 
-#### [ERD](https://drive.google.com/file/d/1Qt0pAaeiH8636qzaB945ax4-rQuH2kLI/view?usp=sharing) | [](https://trello.com/b/dR7xjyop/project-2)
+#### [ERD](https://drive.google.com/file/d/1Qt0pAaeiH8636qzaB945ax4-rQuH2kLI/view?usp=sharing) | [Trello](https://trello.com/b/dR7xjyop/project-2) | [Component Hierarchy Diagram](https://app.diagrams.net/#G17HJUm8vqxFEaSikejdnFQ9OUlaqu9y7h)
 ***
 
 ### ***Description***
-#### This is a full-stack application that allows the user to access a API that stores the times from around the world and compare them on a certain page. User will be able to search places and have there timezones appear as well as select timezones to add to a dashboard that can be directley compared. Potentially I would like to involve weather as well. Using a search bar to access different places and storing the chosen timezones on the main page in an easy and inuitive way for the user.
+#### This application is a place for people to post their thoughts about things in the sporting world where it will be stored in a mongoDB database. Users will then be able to interact with posts either by deleting them or adding comments in reply to the post.
 
 ***
 
 ### ***Technologies Used***
 * Javascript/HTML/CSS
 * MongoDB
+* Express Middleware
+* MERN Stack
 
 ***
 
@@ -25,12 +27,6 @@
 
 ***
 
-### ***Screenshots***
-
-##### image header 1
-
-
-##### image header 2
 
 ***
 
@@ -43,8 +39,6 @@
 ***
 
 ### ***Credits***
-
-##### Funny Images: [DuckDuckGo Search](http://www.duckduckgo.com)
 
 ##### Markdown Guide: [ia.net](https://ia.net/writer/support/general/markdown-guide)
 
