@@ -83,3 +83,15 @@ nav {
   color: black;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.comments {
+  display: grid;
+  gap: 10px;
+  background-color: rgb(46, 46, 143);
+  padding: 20px;
+  margin: 35px;
+  margin-left: 200px;
+  margin-right: 200px;
+  border: 10px solid black;
+  border-radius: 10px;
+}

@@ -15,7 +15,7 @@ const CommentSection = ({ post }) => {
       {post.comments &&
         <div id="comments">
           {post.comments.map((comment) => (
-            <div key={comment.commentor} className="post">
+            <div key={comment.commentor} className="comment">
               <h3>Commentor: {comment.commentor}</h3>
               <p>Reply: {comment.comment}</p>
 
