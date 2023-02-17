@@ -93,3 +93,13 @@ nav {
   border-radius: 10px;
   font-size: x-large;
 }
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100vw;
+  height: 30vh;
+}
