@@ -4,7 +4,7 @@
 
 ### By: Owen Donovan
 
-#### [ERD](https://drive.google.com/file/d/1Qt0pAaeiH8636qzaB945ax4-rQuH2kLI/view?usp=sharing) | [Trello](https://trello.com/b/dR7xjyop/project-2) | [Component Hierarchy Diagram](https://app.diagrams.net/#G17HJUm8vqxFEaSikejdnFQ9OUlaqu9y7h)
+#### [ERD](https://drive.google.com/file/d/1Qt0pAaeiH8636qzaB945ax4-rQuH2kLI/view?usp=sharing) | [Trello](https://trello.com/b/dR7xjyop/project-2) | [Component Hierarchy Diagram](https://app.diagrams.net/#G17HJUm8vqxFEaSikejdnFQ9OUlaqu9y7h) | [ERD](https://drive.google.com/file/d/1M_huNWkgR_kauyH_rRkeSk7wJvK_g-lQ/view?usp=sharing)
 ***
 
 ### ***Description***
