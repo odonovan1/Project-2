@@ -9,7 +9,7 @@ const CommentSection = ({ post }) => {
   }, [post])
 
   return (
-    <div>
+    <div className="commentDiv">
       <Comment />
       <h1>COMMENT SECTION</h1>
       {post.comments &&

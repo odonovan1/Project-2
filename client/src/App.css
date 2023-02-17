@@ -97,11 +97,13 @@ nav {
 .commentForm {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 
-  width: 100vw;
+  width: 30vw;
   height: 30vh;
+  border: 5px solid black;
+
 }
 
 .postBlock {
@@ -110,5 +112,6 @@ nav {
   margin-right: 500px;
   background-color: cornflowerblue;
   border-radius: 5px;
+  margin-top: 10px;
 
 }
