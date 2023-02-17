@@ -132,3 +132,9 @@ nav {
   width: 100vw;
   height: 30vh;
 }
+
+.images {
+  display: grid;
+  justify-content: center;
+  gap: 5px;
+}
