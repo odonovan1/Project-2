@@ -4,8 +4,7 @@ const Home = () => {
 
   return (
     <div>
-
-      <h1>WELCOME TO THE BASKETBALL HQ!</h1>
+      <h1>WELCOME TO THE SPORT HQ!</h1>
     </div>
   )
 }
