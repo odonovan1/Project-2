@@ -37,7 +37,9 @@ const Comment = () => {
 
   return (
     <div >
+
       <form onSubmit={handleSubmit} className='commentForm'>
+        <h4>Reply to this post</h4>
         <label htmlFor='commentor'>Commentor:</label>
         <input type='text' id='commentor' onChange={handleChange} value={commentsState.commentor} />
         <label htmlFor='comment'>Comment:</label>
