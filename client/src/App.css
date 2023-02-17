@@ -22,3 +22,37 @@ form {
 #posts {
   background-color: rgb(46, 46, 143);
 }
+
+nav {
+  background-color: aquamarine;
+  height: 5vh;
+  text-align: left;
+  text-align: justify;
+  padding-top: 20px;
+
+
+}
+
+.link {
+  font-size: larger;
+  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+
+.userPost {
+  font-size: 20px;
+}
+
+.postDetails {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.postForm {
+  border: 10px solid black;
+}
+
+.posts {
+  display: grid;
+}

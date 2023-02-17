@@ -24,12 +24,12 @@ const Posts = ({ posts }) => {
     <div id="posts">
       {posts.map((post) => (
         <div key={post._id} className="post">
-          <h3>Type: {post.postType}</h3>
-          <p>Subject: {post.userTag}</p>
+          <h3>{post.postType} | {post.userTag}</h3>
+
           <p>Message: {post.message}</p>
           <button onClick={() => handleDelete(post)}>Delete Counter</button>
           <Link to={`${post._id}`}>
-            <h1>YAYEET</h1>
+            <h1>Post Details</h1>
           </Link>
         </div>
       ))}

@@ -22,7 +22,7 @@ const PostInterface = (props) => {
 
 
   return (
-    <div>
+    <div className='posts'>
       <Post getPosts={getPosts} />
       <Posts posts={posts} />
 

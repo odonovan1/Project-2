@@ -43,11 +43,12 @@ const PostInfo = (props) => {
 
   return (
     <div>
-      <h1>POSTINFO</h1>
+
       <div>
-        <h3>Post Type: {post.postType}</h3>
-        <h3>User: {post.userTag}</h3>
-        <p>{post.message}</p>
+
+        <h1 className='postDetails'>Post Author: {post.userTag}</h1>
+        <h2 className='postDetails'>Post Type: {post.postType}</h2>
+        <p className='userPost'>{post.message}</p>
       </div>
       <CommentSection post={post} />
 

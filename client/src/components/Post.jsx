@@ -26,19 +26,22 @@ const Post = (props) => {
 
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="postType">Type of Post:</label>
-      <select id="postType" onChange={handleChange} value={postState.postType}>
-        <option value="hot">Hot Take</option>
-        <option value="contro">Controversial</option>
-        <option value="shower">Shower Thought</option>
-      </select>
-      <label htmlFor="userTag">User Tag:</label>
-      <input type="text" id="userTag" onChange={handleChange} value={postState.userTag} />
-      <label htmlFor="message">Message</label>
-      <textarea id="message" cols="30" rows="10" onChange={handleChange} value={postState.message}></textarea>
-      <button type="submit">Send</button>
-    </form>
+    <div className="postForm">
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="postType">Type of Post:</label>
+        <select id="postType" onChange={handleChange} value={postState.postType}>
+          <option value="Hot Take">Hot Take</option>
+          <option value="Controversial">Controversial</option>
+          <option value="Shower Thought">Shower Thought</option>
+          <option value="General">General</option>
+        </select>
+        <label htmlFor="userTag">User Tag:</label>
+        <input type="text" id="userTag" onChange={handleChange} value={postState.userTag} />
+        <label htmlFor="message">Message</label>
+        <textarea id="message" cols="30" rows="10" onChange={handleChange} value={postState.message}></textarea>
+        <button type="submit">Post</button>
+      </form>
+    </div>
   )
 }
 
