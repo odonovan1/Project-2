@@ -46,7 +46,6 @@ const PostInfo = () => {
       <div className='postBlock'>
 
         <h1 className='postDetails'>{post.userTag} | {post.postType}</h1>
-
         <p className='userPost'>{post.message}</p>
       </div>
       <CommentSection post={post} />

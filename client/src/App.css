@@ -102,6 +102,9 @@ nav {
   width: 30vw;
   height: 30vh;
   border: 5px solid black;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: chocolate;
 
 }
 
