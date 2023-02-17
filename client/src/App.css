@@ -57,7 +57,8 @@ nav {
 }
 
 .postForm {
-  border: 10px solid black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 .posts {
