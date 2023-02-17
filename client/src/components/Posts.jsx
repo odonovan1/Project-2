@@ -27,7 +27,7 @@ const Posts = ({ posts }) => {
           <h3>{post.postType} | {post.userTag}</h3>
 
           <p>Message: {post.message}</p>
-          <button onClick={() => handleDelete(post)}>Delete Counter</button>
+          <button onClick={() => handleDelete(post._id)}>Vote to Delete!</button>
           <Link to={`${post._id}`}>
             <h1>Post Details</h1>
           </Link>
