@@ -17,10 +17,10 @@ const App = () => {
       <Header />
       <main className='main'>
         <Routes>
-          <Route index element={<Home />} />
-          <Route path="posts" element={<PostInterface />} />
-          <Route path='posts/:id' element={<PostInfo />} />
-          <Route path='about' element={<About />} />
+          <Route path='/' element={<Home />} />
+          <Route path="/posts" element={<PostInterface />} />
+          <Route path='/posts/:id' element={<PostInfo />} />
+          <Route path='/about' element={<About />} />
         </Routes>
       </main>
 

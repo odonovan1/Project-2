@@ -1,44 +1,28 @@
-import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { useEffect } from "react"
 import Comment from "./Comment"
-import axios from "axios"
 
 const CommentSection = ({ post }) => {
   const initialState = []
 
-  const [commentsState, setCommentsState] = useState(initialState)
-
-  const getComments = async () => {
-    try {
-      let res = await axios.get('http://localhost:3001/posts/:id')
-
-      setCommentsState(res.data)
-    } catch (err) {
-      console.log(err)
-    }
-  }
-
   useEffect(() => {
-    getComments()
-  }, [])
 
-
-
+  }, [post])
 
   return (
     <div>
       <Comment />
       <h1>COMMENT SECTION</h1>
-      <div id="comments">
-        {commentsState.map((comment) => (
-          <div key={comment.commenter} className="post">
-            <h3>Commentor: {comment.commenter}</h3>
-            <p>Message: {comment.comment}</p>
+      {post.comments &&
+        <div id="comments">
+          {post.comments.map((comment) => (
+            <div key={comment.commentor} className="post">
+              <h3>Commentor: {comment.commentor}</h3>
+              <p>Reply: {comment.comment}</p>
 
-          </div>
-        ))}
-      </div>
-
+            </div>
+          ))}
+        </div>
+      }
     </div>
   )
 }

@@ -1,36 +1,35 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Link } from "react-router-dom"
 import CommentSection from '../components/CommentSection'
-import Comment from '../components/Comment'
 
 
-const PostInfo = (props) => {
 
+const PostInfo = () => {
+
+  let { id } = useParams()
 
   const [posts, setPosts] = useState([])
 
   const [post, setPost] = useState({})
 
   const getPosts = async () => {
-    try {
-      let res = await axios.get('http://localhost:3001/posts')
-      setPosts(res.data)
-    } catch (err) {
-      console.log(err)
-    }
+
+    let res = await axios.get('http://localhost:3001/posts')
+
+    setPosts(res.data)
+
   }
   useEffect(() => {
     getPosts()
   }, [])
 
-  let { id } = useParams()
   const getPost = async () => {
     for (let i = 0; i < posts.length; i++) {
       if (posts[i]._id === id) {
+        console.log("hello")
         setPost(posts[i])
-
+        getPost()
       } else {
         console.log(`${posts[i]._id} was not chosen`)
       }

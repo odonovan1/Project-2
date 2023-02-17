@@ -1,22 +1,14 @@
 
 import axios from "axios";
-import { useState } from "react"
-import { Link, useParams } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 const Posts = ({ posts }) => {
 
-  const [clickCount, setClickCount] = useState(0);
-
-  let { id } = useParams()
-
+  let navigate = useNavigate()
 
   const handleDelete = async (id) => {
-    console.log(id)
 
-    if (clickCount >= 3) {
-      await axios.delete({ _id: id })
-    } else {
-      setClickCount(clickCount + 1);
-    }
+    await axios.delete(`http://localhost:3001/posts/${id}`)
+    navigate('/')
   };
 
 

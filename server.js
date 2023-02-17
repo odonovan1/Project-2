@@ -20,8 +20,15 @@ app.use(logger('dev'))
 
 app.get('/posts', async (req, res) => {
   console.log(req.body)
-  let posts = await Post.find({})
+  let posts = await Post.find({}).populate('comments')
   res.send(posts)
+})
+
+app.get('/posts/:id', async (req, res) => {
+  const id = req.params.id;
+  const post = await Post.findById(id).populate('comments')
+
+  res.send(post)
 })
 
 app.post('/posts', async (req, res) => {
@@ -31,23 +38,19 @@ app.post('/posts', async (req, res) => {
 
 app.delete('/posts/:id', async (req, res) => {
   const id = req.params.id;
-  const deletedPost = await Post.findByIdAndDelete(id);
-  res.send(deletedPost)
+  await Post.findByIdAndDelete(id);
+  res.send('post was deleted')
 });
 
-app.put('/posts/:id', async (req, res) => {
+app.put('/posts/:id/comment', async (req, res) => {
 
-  const { id } = req.params
-  const comments = await Post.findOne({ _id: id })
+  const id = req.params.id
+  const post = await Post.findOne({ _id: id })
   let newComment = await Comment.create(req.body)
-  const updated = await Post.findOneAndUpdate(
-    { _id: id },
-    { comments: [...comments.comments, newComment] },
-    { new: true }
-  )
-
-
-  res.send(updated)
+  console.log(newComment)
+  post.comments.push(newComment._id)
+  await post.save()
+  res.send(post)
 
 })
 

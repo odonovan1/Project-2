@@ -34,7 +34,7 @@ form {
 }
 
 nav {
-  background-color: rgb(212, 96, 0);
+  background-color: chocolate;
   height: 5vh;
   text-align: left;
   text-align: justify;
@@ -77,4 +77,9 @@ nav {
 
 .postMessage {
   font-size: larger;
+}
+
+.details {
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

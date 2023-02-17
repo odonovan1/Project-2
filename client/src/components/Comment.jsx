@@ -1,9 +1,10 @@
 import axios from 'axios'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 
 const Comment = () => {
 
-
+  let { id } = useParams()
   const initialState = {
     commentor: '',
     comment: ''
@@ -12,39 +13,36 @@ const Comment = () => {
   const [commentsState, setCommentsState] = useState(initialState)
 
   const getComments = async () => {
-    try {
-      let res = await axios.get('http://localhost:3001/posts/:id')
 
-      setCommentsState(res.data)
-    } catch (err) {
-      console.log(err)
-    }
+    let res = await axios.get(`http://localhost:3001/posts/${id}`)
+    console.log(res)
+    setCommentsState(res.data)
+
   }
 
   const handleSubmit = async (e) => {
 
     e.preventDefault()
 
-    await axios.put('http://localhost:3001/posts/:id', commentsState)
+    await axios.put(`http://localhost:3001/posts/${id}/comment`, commentsState)
 
     setCommentsState(initialState)
     getComments()
+
   }
-
-
 
   const handleChange = (e) => {
     setCommentsState({ ...commentsState, [e.target.id]: e.target.value })
   }
 
   return (
-    <div>
+    <div className='commentForm'>
       <form onSubmit={handleSubmit}>
         <label htmlFor='commentor'>Commentor:</label>
         <input type='text' id='commentor' onChange={handleChange} value={commentsState.commentor} />
         <label htmlFor='comment'>Comment:</label>
-        <input type='text' id='comment' onChange={handleChange} value={commentsState.comment} />
 
+        <textarea id="comment" cols="50" rows="10" onChange={handleChange} value={commentsState.comment}></textarea>
         <button type='submit'>Comment</button>
       </form>
     </div>
