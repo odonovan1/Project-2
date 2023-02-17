@@ -103,3 +103,9 @@ nav {
   width: 100vw;
   height: 30vh;
 }
+
+.postBlock {
+  border: 10px solid black;
+  margin-left: 40px;
+  margin-right: 40px;
+}
