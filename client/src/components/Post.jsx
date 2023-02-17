@@ -27,6 +27,7 @@ const Post = (props) => {
 
   return (
     <div className="postForm">
+      <h1>Make Your own Post!</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="postType">Type of Post:</label>
         <select id="postType" onChange={handleChange} value={postState.postType}>
@@ -38,7 +39,7 @@ const Post = (props) => {
         <label htmlFor="userTag">User Tag:</label>
         <input type="text" id="userTag" onChange={handleChange} value={postState.userTag} />
         <label htmlFor="message">Message</label>
-        <textarea id="message" cols="30" rows="10" onChange={handleChange} value={postState.message}></textarea>
+        <textarea id="message" cols="50" rows="10" onChange={handleChange} value={postState.message}></textarea>
         <button type="submit">Post</button>
       </form>
     </div>
