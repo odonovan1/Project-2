@@ -30,7 +30,7 @@ const PostInfo = (props) => {
     for (let i = 0; i < posts.length; i++) {
       if (posts[i]._id === id) {
         setPost(posts[i])
-        console.log(post)
+
       } else {
         console.log(`${posts[i]._id} was not chosen`)
       }
@@ -41,10 +41,6 @@ const PostInfo = (props) => {
     getPost()
   }, [posts])
 
-
-
-
-
   return (
     <div>
       <h1>POSTINFO</h1>
@@ -53,7 +49,10 @@ const PostInfo = (props) => {
         <h3>User: {post.userTag}</h3>
         <p>{post.message}</p>
       </div>
-      <Comment />
+      <CommentSection post={post} />
+
+
+
 
 
     </div>

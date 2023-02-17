@@ -1,16 +1,19 @@
 
+import axios from "axios";
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 const Posts = ({ posts }) => {
 
   const [clickCount, setClickCount] = useState(0);
 
+  let { id } = useParams()
 
-  const handleDelete = async (e) => {
-    console.log(posts)
-    console.log(e)
+
+  const handleDelete = async (post) => {
+    console.log(post)
+
     if (clickCount >= 3) {
-      console.log('its three')
+      await axios.delete({ _id: post._id })
     } else {
       setClickCount(clickCount + 1);
     }
@@ -24,7 +27,7 @@ const Posts = ({ posts }) => {
           <h3>Type: {post.postType}</h3>
           <p>Subject: {post.userTag}</p>
           <p>Message: {post.message}</p>
-          <button onClick={handleDelete}>Delete Counter</button>
+          <button onClick={() => handleDelete(post)}>Delete Counter</button>
           <Link to={`${post._id}`}>
             <h1>YAYEET</h1>
           </Link>

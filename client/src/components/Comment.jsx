@@ -14,6 +14,7 @@ const Comment = () => {
   const getComments = async () => {
     try {
       let res = await axios.get('http://localhost:3001/posts/:id')
+
       setCommentsState(res.data)
     } catch (err) {
       console.log(err)

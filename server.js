@@ -19,6 +19,7 @@ app.use(logger('dev'))
 
 
 app.get('/posts', async (req, res) => {
+  console.log(req.body)
   let posts = await Post.find({})
   res.send(posts)
 })
@@ -29,20 +30,25 @@ app.post('/posts', async (req, res) => {
 })
 
 app.delete('/posts/:id', async (req, res) => {
-  const postId = req.params.id;
-  const deletedPost = await Post.findByIdAndDelete(postId);
+  const id = req.params.id;
+  const deletedPost = await Post.findByIdAndDelete(id);
   res.send(deletedPost)
 });
 
 app.put('/posts/:id', async (req, res) => {
-  const { id } = req.params.id
-  let { comment } = req.body
-  const updatedComments = await Post.findByIdAndUpdate(
-    id,
-    { $push: { comments: comment } },
+
+  const { id } = req.params
+  const comments = await Post.findOne({ _id: id })
+  let newComment = await Comment.create(req.body)
+  const updated = await Post.findOneAndUpdate(
+    { _id: id },
+    { comments: [...comments.comments, newComment] },
     { new: true }
   )
-  res.status(200).json(updatedComments)
+
+
+  res.send(updated)
+
 })
 
 app.listen(PORT, () => {
