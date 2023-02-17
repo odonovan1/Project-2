@@ -9,11 +9,11 @@ const Posts = ({ posts }) => {
   let { id } = useParams()
 
 
-  const handleDelete = async (post) => {
-    console.log(post)
+  const handleDelete = async (id) => {
+    console.log(id)
 
     if (clickCount >= 3) {
-      await axios.delete({ _id: post._id })
+      await axios.delete({ _id: id })
     } else {
       setClickCount(clickCount + 1);
     }

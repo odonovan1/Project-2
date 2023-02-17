@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import Comment from "./Comment"
 import axios from "axios"
@@ -18,9 +18,11 @@ const CommentSection = ({ post }) => {
     }
   }
 
-  getComments()
+  useEffect(() => {
+    getComments()
+  }, [])
 
-  console.log(post.comments)
+
 
 
   return (
