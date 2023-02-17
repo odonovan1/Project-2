@@ -43,7 +43,7 @@ const PostInfo = () => {
   return (
     <div>
 
-      <div>
+      <div className='postBlock'>
 
         <h1 className='postDetails'>Post Author: {post.userTag}</h1>
         <h2 className='postDetails'>Post Type: {post.postType}</h2>
