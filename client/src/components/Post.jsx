@@ -26,7 +26,7 @@ const Post = (props) => {
 
 
   return (
-    <div >
+    <div className="postDiv">
       <h1>Make Your own Post!</h1>
       <form onSubmit={handleSubmit} className="postForm">
         <label htmlFor="postType">Type of Post:</label>
