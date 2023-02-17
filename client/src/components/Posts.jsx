@@ -29,7 +29,7 @@ const Posts = ({ posts }) => {
           <p className="postMessage">{post.message}</p>
           <button onClick={() => handleDelete(post._id)}>Vote to Delete!</button>
           <Link to={`${post._id}`}>
-            <h4>Post Details</h4>
+            <h4 className="details">Post Details</h4>
           </Link>
         </div>
       ))}
