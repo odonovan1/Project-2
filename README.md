@@ -8,7 +8,7 @@
 ***
 
 ### ***Description***
-#### This application is a place for people to post their thoughts about things in the sporting world where it will be stored in a mongoDB database. Users will then be able to interact with posts either by deleting them or adding comments in reply to the post.
+#### This application is a place for people to post their thoughts about things in the sporting world where it will be stored in a mongoDB database. Users will then be able to interact with posts either by deleting them or adding comments in reply to the post. Designed to allow users to engage with others and create a discussion type forum for certain topics
 
 ***
 
